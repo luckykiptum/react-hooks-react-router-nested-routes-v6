@@ -1,12 +1,29 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "./NavBar.css"
 
-function UserCard({user}) {
-    return (
-      <article>
-          <h2>{user.name}</h2>
-          <Link to={`/profile/${user.id}`}>View profile</Link>
-      </article>
-    );
-  };
-  
-  export default UserCard;
+function NavBar() {
+  return (
+    <nav>
+      <NavLink
+        to="/"
+        className="nav-link"
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/about"
+        className="nav-link"
+      >
+        About
+      </NavLink>
+      <NavLink
+        to="/login"
+        className="nav-link"
+      >
+        Login
+      </NavLink>
+    </nav>
+  );
+};
+
+export default NavBar;
